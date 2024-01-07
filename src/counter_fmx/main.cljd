@@ -1,0 +1,11 @@
+(ns counter-fmx.main
+  (:require
+    ["package:flutter/widgets.dart" :as w]
+    [tilton.fmx.api :as fx]
+    [counter-fmx.hello-world :as hello]))
+
+(defn main []
+  (.ensureInitialized w/WidgetsFlutterBinding)
+  (fx/run-fx-app
+    (hello/make-app)))
+
